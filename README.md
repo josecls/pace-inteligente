@@ -8,6 +8,9 @@ Landing page de conversão para o e-book **Pace Inteligente** (R$ 4,99), constru
 |------|-----------|
 | `/` | Landing page principal com todas as seções de venda |
 | `/obrigado` | Página pós-compra — agradece e orienta o cliente a aguardar o acesso por e-mail e WhatsApp |
+| `/termos` | Termos de Uso |
+| `/privacidade` | Política de Privacidade |
+| `/contato` | Contato e suporte |
 
 Configure a URL de redirecionamento pós-compra na Lowify apontando para `https://seu-dominio.com/obrigado`.
 
@@ -26,9 +29,11 @@ cp .env.example .env
 | `VITE_LOWIFY_CHECKOUT_URL` | Sim (prod) | URL do checkout Lowify |
 | `VITE_SITE_URL` | Recomendada | URL canônica do site |
 | `VITE_META_PIXEL_ID` | Não | ID do Meta Pixel |
-| `VITE_TERMS_URL` | Não | Link dos Termos de Uso |
-| `VITE_PRIVACY_URL` | Não | Link da Política de Privacidade |
-| `VITE_CONTACT_URL` | Não | Link de Contato |
+| `VITE_TERMS_URL` | Não | Sobrescreve link dos Termos (padrão: `/termos`) |
+| `VITE_PRIVACY_URL` | Não | Sobrescreve link da Privacidade (padrão: `/privacidade`) |
+| `VITE_CONTACT_URL` | Não | Sobrescreve link de Contato (padrão: `/contato`) |
+| `VITE_CONTACT_EMAIL` | Não | E-mail exibido na página de contato |
+| `VITE_CONTACT_WHATSAPP` | Não | URL do WhatsApp (ex.: `https://wa.me/5511999999999`) |
 
 ## Desenvolvimento local
 

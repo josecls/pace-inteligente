@@ -1,4 +1,5 @@
 import { FOOTER_LINKS, PRODUCT_NAME } from '../lib/constants'
+import { FooterLink } from './FooterLink'
 import { Logo } from './Logo'
 
 export function Footer() {
@@ -14,15 +15,9 @@ export function Footer() {
         </p>
 
         <nav className="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-sm" aria-label="Legal">
-          <a href={FOOTER_LINKS.terms} className="hover:text-white transition-colors">
-            Termos de Uso
-          </a>
-          <a href={FOOTER_LINKS.privacy} className="hover:text-white transition-colors">
-            Política de Privacidade
-          </a>
-          <a href={FOOTER_LINKS.contact} className="hover:text-white transition-colors">
-            Contato
-          </a>
+          <FooterLink href={FOOTER_LINKS.terms}>Termos de Uso</FooterLink>
+          <FooterLink href={FOOTER_LINKS.privacy}>Política de Privacidade</FooterLink>
+          <FooterLink href={FOOTER_LINKS.contact}>Contato</FooterLink>
         </nav>
 
         <p className="mt-8 text-xs text-white/40">
